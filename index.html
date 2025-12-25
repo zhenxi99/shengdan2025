@@ -922,10 +922,10 @@
 
             // Rotation Logic
             if (STATE.mode === 'SCATTER' && STATE.hand.detected) {
-                const targetRotY = STATE.hand.x * Math.PI * 0.9;
-                const targetRotX = STATE.hand.y * Math.PI * 0.25;
-                STATE.rotation.y += (targetRotY - STATE.rotation.y) * 3.0 * dt;
-                STATE.rotation.x += (targetRotX - STATE.rotation.x) * 3.0 * dt;
+                const targetRotY = STATE.hand.x * Math.PI * 1.5; // 放大左右旋转幅度
+const targetRotX = STATE.hand.y * Math.PI * 0.5; // 放大上下旋转幅度
+STATE.rotation.y += (targetRotY - STATE.rotation.y) * 5.0 * dt; // 增加插值速度
+STATE.rotation.x += (targetRotX - STATE.rotation.x) * 5.0 * dt;
             } else {
                 if (STATE.mode === 'TREE') {
                     STATE.rotation.y += 0.3 * dt;

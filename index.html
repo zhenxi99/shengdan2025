@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grand Luxury Tree - Adaptive Hand Gestures</title>
+    <title>Merry Christmas, 筱毓</title>
     <style>
+        
         body {
             margin: 0;
             overflow: hidden;
@@ -196,6 +197,19 @@
             padding: 2px 5px;
             pointer-events: none;
         }
+
+        @media (max-width: 768px) {
+            #ui-layer h1 {
+                font-size: 32px;      /* 调整字体大小 */
+                text-align: center;   /* 居中对齐 */
+                letter-spacing: 2px;  /* 调整字母间距 */
+                padding: 0 10px;      /* 给一点内边距，防止文字太靠边 */
+            }
+            
+            #ui-layer {
+                padding-top: 20px;    /* 顶部距离缩小 */
+            }
+        }
     </style>
 
     <style>
@@ -242,7 +256,7 @@
         </div> -->
     </div>
 
-    <div id="webcam-wrapper">
+    <div id="webcam-wrapper" hidden>
         <video id="webcam" autoplay playsinline></video>
         <div id="debug-info">Initializing...</div>
         <canvas id="webcam-preview" style="display:none;"></canvas>
